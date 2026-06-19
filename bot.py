@@ -12,7 +12,7 @@ print("RUNNING SCARCEBOT VERSION 2 - AI MEMORY CODE")
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 DB_NAME = "scarce_memory.db"
 
@@ -154,7 +154,7 @@ hello_responses = [
     "how are you doing?"
 ]
 
-@bot.event
+
 @bot.event
 async def on_message(message):
     if message.author.bot:
